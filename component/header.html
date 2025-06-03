@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="../public/styles/output.css" />
+    <link rel="icon" href="./images/fav-icon.png" />
+    <script>
+      // بررسی مقدار ذخیره‌شده در localStorage
+      const theme = localStorage.getItem("theme");
+      if (
+        theme === "dark" ||
+        (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-white">
+    <!-- Pack Icon -->
+    <svg class="hidden">
+      <symbol
+        id="shopping-cart"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+        />
+      </symbol>
+      <symbol
+        id="moon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol
+        id="sun"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+        />
+      </symbol>
+      <symbol
+        id="arrow-left-end-on-rectangle"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm5.03 4.72a.75.75 0 0 1 0 1.06l-1.72 1.72h10.94a.75.75 0 0 1 0 1.5H10.81l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3a.75.75 0 0 1 1.06 0Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol
+        id="chevron-left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        />
+      </symbol>
+    </svg>
+
+    <header
+      class="fixed left-0 right-0 top-9 w-[90%] mx-auto bg-black/50 rounded-3xl py-5 px-10 backdrop-blur-[6px]"
+    >
+      <div
+        class="flex justify-between items-center w-full h-14 font-dana text-xl"
+      >
+        <!-- Nav Logo & Menu -->
+        <nav class="flex items-center text-gray-300 gap-x-9">
+          <!-- Logo -->
+          <div>
+            <img src="./images/app-logo.png" alt="" />
+          </div>
+          <!-- Menu -->
+          <ul
+            class="flex items-center gap-x-9 tracking-tight h-14 *:h-full *:leading-14"
+          >
+            <li class="text-orange-200">
+              <a href="#">صفحه اصلی</a>
+            </li>
+            <li
+              class="relative group transition-all delay-75 hover:text-orange-300"
+            >
+              <a href="#">فروشگاه</a>
+              <!-- Sub Menu -->
+              <ul
+                class="absolute top-14 w-52 font-dana-medium text-base h-68 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-5 px-6 rounded-2xl leading-6 tracking-normal space-y-4 border-t-[3px] border-t-orange-200 shadow-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all delay-75 *:inline-block *:transition-colors *:hover:text-orange-300"
+              >
+                <li>
+                  <a href="#">قهوه ویژه</a>
+                </li>
+                <li>
+                  <a href="#">ویژه در سطح جهانی</a>
+                </li>
+                <li>
+                  <a href="#">قهوه درجه یک</a>
+                </li>
+                <li>
+                  <a href="#">ترکیبات تجاری</a>
+                </li>
+                <li>
+                  <a href="#">کپسول قهوه</a>
+                </li>
+                <li>
+                  <a href="#">قهوه زینو برزیلی</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">دیکشنری</a>
+            </li>
+            <li>
+              <a href="#">بلاگ</a>
+            </li>
+            <li>
+              <a href="#">درباره ما</a>
+            </li>
+            <li>
+              <a href="#">تماس با ما</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Nav Link -->
+        <div class="flex items-center gap-x-5 text-orange-200">
+          <!-- Sopping Card && DarkMode  -->
+          <div class="flex gap-x-5 items-center">
+            <!-- Sopping Card -->
+            <div class="relative group" id="shopping-cart">
+              <div class="py-3 cursor-pointer">
+                <svg class="size-8">
+                  <use href="#shopping-cart"></use>
+                </svg>
+              </div>
+              <!-- Shopping Card Content -->
+              <div
+                class="absolute font-dana-medium left-0 w-100 p-5 text-zinc-700 bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-200 shadow-light opacity-0 invisible transition-all delay-75 group-hover:opacity-100 group-hover:visible"
+                id="shopping-cart-content"
+              >
+                <!-- Sopping Header -->
+                <div
+                  class="flex items-center justify-between text-xs tracking-tighter py-1"
+                >
+                  <span class="text-gray-300">1 مورد</span>
+                  <div class="flex items-center text-orange-300 cursor-pointer">
+                    <span class="">مشاهده سبد خرید</span>
+                    <svg class="size-4.25 tracking-tighter">
+                      <use href="#chevron-left" class="w-2.5 h-1.5"></use>
+                    </svg>
+                  </div>
+                </div>
+                <!-- Sopping Body -->
+                <div
+                  class="flex flex-col items-center gap-x-2.5 border-b border-b-gray-300 dark:border-b-white/10 divide-y divide-gray-100 *:py-5 dark:divide-white/5"
+                >
+                  <div class="flex">
+                    <img
+                      class="size-30"
+                      src="./images/products/p2.png"
+                      alt="p2"
+                    />
+                    <div class="flex flex-col gap-y-6">
+                      <p class="text-base dark:text-white line-clamp-2">
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </p>
+                      <div>
+                        <p
+                          class="text-xs text-teal-600 dark:text-emerald-500 tracking-tighter py-1"
+                        >
+                          14.500 تومان تخفیف
+                        </p>
+                        <p class="font-dana-demibold text-xl dark:text-white">
+                          175,000
+                          <span class="font-dana-medium text-sm">تومان</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden">
+                    <img
+                      class="size-30"
+                      src="./images/products/p1.png"
+                      alt="p2"
+                    />
+                    <div class="flex flex-col gap-y-6">
+                      <p class="text-base dark:text-white line-clamp-2">
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </p>
+                      <div>
+                        <p
+                          class="text-xs text-teal-600 dark:text-emerald-500 tracking-tighter py-1"
+                        >
+                          14.500 تومان تخفیف
+                        </p>
+                        <p class="font-dana-demibold text-xl dark:text-white">
+                          175,000
+                          <span class="font-dana-medium text-sm">تومان</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sopping Foother -->
+                <div class="flex items-center justify-between mt-5">
+                  <div class="flex flex-col">
+                    <span class="text-xs text-gray-300 tracking-tighter py-1"
+                      >مبلغ قابل پرداخت</span
+                    >
+                    <span class="dark:text-white">350,000 تومان</span>
+                  </div>
+                  <button
+                    class="font-dana w-36 h-14 bg-teal-600 tracking-tight transition-colors hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white rounded-xl cursor-pointer"
+                    type="button"
+                  >
+                    ثبت سفارش
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- DarkMode Toggle -->
+            <div class="cursor-pointer" id="toggle-theme">
+              <div>
+                <svg class="inline-block dark:hidden size-8">
+                  <use href="#moon"></use>
+                </svg>
+              </div>
+              <div>
+                <svg class="hidden dark:inline-block size-8">
+                  <use href="#sun"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Line -->
+          <span class="block w-px h-14 bg-white/20"></span>
+          <!-- Login Link -->
+          <div class="flex items-center gap-x-2.5">
+            <svg class="size-8 rotate-180">
+              <use href="#arrow-left-end-on-rectangle"></use>
+            </svg>
+            <span class="tracking-tight">ورود | ثبت‌نام</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const toggleThemeBtn = document.querySelector("#toggle-theme");
+      const shoppingCartIcon = document.querySelector("#shopping-cart");
+      const shoppingCartContent = document.querySelector(
+        "#shopping-cart-content"
+      );
+
+      const themeHandler = () => {
+        if (localStorage.theme === "dark") {
+          document.documentElement.classList.remove("dark");
+          localStorage.theme = "light";
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      };
+
+      //* بجای این تابع فعلا از هاور استفاده می‌کنیم
+      const shoppingCartHandler = () => {
+        const cls = ["opacity-0", "invisible", "opacity-100", "visible"];
+
+        cls.forEach((className) => {
+          shoppingCartContent.classList.toggle(className);
+        });
+      };
+
+      toggleThemeBtn.addEventListener("click", themeHandler);
+    </script>
+  </body>
+</html>

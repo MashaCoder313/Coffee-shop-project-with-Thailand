@@ -84,29 +84,34 @@
     </svg>
 
     <header
-      class="fixed left-0 right-0 top-9 w-[90%] mx-auto bg-black/50 rounded-3xl py-5 px-10 backdrop-blur-[6px]"
+      class="hidden fixed left-0 right-0 top-9 mx-auto bg-black/50 rounded-3xl py-5 px-5 lg:px-7.5 xl:px-10 backdrop-blur-[6px] sm:block sm:w-[97%] lg:w-[95%] xl:w-[93%] 2xl:w-[90%]"
     >
       <div
         class="flex justify-between items-center w-full h-14 font-dana text-xl"
       >
-        <!-- Nav Logo & Menu -->
-        <nav class="flex items-center text-gray-300 gap-x-9">
-          <!-- Logo -->
-          <div>
-            <img src="./images/app-logo.png" alt="" />
+        <!-- ========================= Navigation: Logo & Menu ========================== -->
+
+        <nav
+          class="flex items-center text-gray-300 gap-x-6 lg:gap-x-7.5 xl:gap-x-9"
+        >
+          <!-- Logo Section -->
+          <div class="shrink-0">
+            <img src="./images/app-logo.png" alt="app-logo" />
           </div>
-          <!-- Menu -->
+          <!-- Main Menu (Desktop) -->
           <ul
-            class="flex items-center gap-x-9 tracking-tight h-14 *:h-full *:leading-14"
+            class="flex items-center gap-x-6 lg:gap-x-7.5 xl:gap-x-9 tracking-tight h-14 *:h-full *:leading-14"
           >
+            <!-- Home Link -->
             <li class="text-orange-200">
               <a href="#">صفحه اصلی</a>
             </li>
+            <!-- Shop Dropdown Menu -->
             <li
               class="relative group transition-all delay-75 hover:text-orange-300"
             >
               <a href="#">فروشگاه</a>
-              <!-- Sub Menu -->
+              <!-- Sub Menu (Shop) -->
               <ul
                 class="absolute top-14 w-52 font-dana-medium text-base h-68 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-5 px-6 rounded-2xl leading-6 tracking-normal space-y-4 border-t-[3px] border-t-orange-200 shadow-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all delay-75 *:inline-block *:transition-colors *:hover:text-orange-300"
               >
@@ -130,38 +135,44 @@
                 </li>
               </ul>
             </li>
+            <!-- Dictionary Link -->
             <li>
               <a href="#">دیکشنری</a>
             </li>
+            <!-- Dictionary Link -->
             <li>
               <a href="#">بلاگ</a>
             </li>
+            <!-- About Us Link -->
             <li>
               <a href="#">درباره ما</a>
             </li>
+            <!-- Contact Us Link -->
             <li>
               <a href="#">تماس با ما</a>
             </li>
           </ul>
         </nav>
 
-        <!-- Nav Link -->
-        <div class="flex items-center gap-x-5 text-orange-200">
-          <!-- Sopping Card && DarkMode  -->
-          <div class="flex gap-x-5 items-center">
-            <!-- Sopping Card -->
+        <!-- ========================= Navigation: Actions (Cart, Theme, Login)  ========================== -->
+
+        <div class="flex items-center gap-x-4 lg:gap-x-5 text-orange-200">
+          <!-- Cart & Dark Mode Toggle -->
+          <div class="flex gap-x-4 lg:gap-x-5 items-center">
+            <!-- Shopping Cart (with dropdown) -->
             <div class="relative group" id="shopping-cart">
+              <!-- Cart Icon -->
               <div class="py-3 cursor-pointer">
                 <svg class="size-8">
                   <use href="#shopping-cart"></use>
                 </svg>
               </div>
-              <!-- Shopping Card Content -->
+              <!-- Cart Dropdown Content -->
               <div
                 class="absolute font-dana-medium left-0 w-100 p-5 text-zinc-700 bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-200 shadow-light opacity-0 invisible transition-all delay-75 group-hover:opacity-100 group-hover:visible"
                 id="shopping-cart-content"
               >
-                <!-- Sopping Header -->
+                <!-- Cart Header -->
                 <div
                   class="flex items-center justify-between text-xs tracking-tighter py-1"
                 >
@@ -173,10 +184,11 @@
                     </svg>
                   </div>
                 </div>
-                <!-- Sopping Body -->
+                <!-- Cart Body (Product List) -->
                 <div
                   class="flex flex-col items-center gap-x-2.5 border-b border-b-gray-300 dark:border-b-white/10 divide-y divide-gray-100 *:py-5 dark:divide-white/5"
                 >
+                  <!-- Product Item -->
                   <div class="flex">
                     <img
                       class="size-30"
@@ -200,6 +212,7 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Hidden Product Example (for future use) -->
                   <div class="hidden">
                     <img
                       class="size-30"
@@ -224,7 +237,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- Sopping Foother -->
+                <!-- Cart Footer (Total & Checkout) -->
                 <div class="flex items-center justify-between mt-5">
                   <div class="flex flex-col">
                     <span class="text-xs text-gray-300 tracking-tighter py-1"
@@ -241,13 +254,16 @@
                 </div>
               </div>
             </div>
-            <!-- DarkMode Toggle -->
+
+            <!-- Dark Mode Toggle Button -->
             <div class="cursor-pointer" id="toggle-theme">
+              <!-- Moon Icon (Light Mode) -->
               <div>
                 <svg class="inline-block dark:hidden size-8">
                   <use href="#moon"></use>
                 </svg>
               </div>
+              <!-- Sun Icon (Dark Mode) -->
               <div>
                 <svg class="hidden dark:inline-block size-8">
                   <use href="#sun"></use>
@@ -255,14 +271,15 @@
               </div>
             </div>
           </div>
-          <!-- Line -->
+          <!-- Vertical Divider Line -->
           <span class="block w-px h-14 bg-white/20"></span>
-          <!-- Login Link -->
+
+          <!-- Login/Register Link -->
           <div class="flex items-center gap-x-2.5">
             <svg class="size-8 rotate-180">
               <use href="#arrow-left-end-on-rectangle"></use>
             </svg>
-            <span class="tracking-tight">ورود | ثبت‌نام</span>
+            <span class="tracking-tight hidden lg:block">ورود | ثبت‌نام</span>
           </div>
         </div>
       </div>
