@@ -879,10 +879,17 @@
   font-family: "Morabba Bold";
   src: url("../fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
 }
-body {
-  background-image: url(../images/headerBgDesktop.webp);
-  background-repeat: no-repeat;
-  height: 100rem;
+@layer utilities {
+  .headerBgDesktop {
+    height: calc(var(--spacing) * 100);
+    background-repeat: no-repeat;
+    @media (width < 600px) {
+      background-image: url('../images/headerBgMobile.webp');
+    }
+    @media (width >= 600px) {
+      background-image: url('../images/headerBgDesktop.webp');
+    }
+  }
 }
 @property --tw-space-y-reverse {
   syntax: "*";
