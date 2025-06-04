@@ -1,6 +1,12 @@
 const toggleThemeBtn = document.querySelector("#toggle-theme");
 const shoppingCartIcon = document.querySelector("#shopping-cart");
 const shoppingCartContent = document.querySelector("#shopping-cart-content");
+const mobileMenuBtn = document.querySelector("#mobile-menu-toggle");
+const mobileMenuContent = document.querySelector("#mobile-menu-content");
+const overlay = document.querySelector(".overlay");
+const xMark = document.querySelector(".x-mark");
+const storeElement = document.querySelector("#store");
+const subMenuElem = document.querySelector(".sub-menu");
 
 const themeHandler = () => {
   if (localStorage.theme === "dark") {
@@ -21,4 +27,18 @@ const shoppingCartHandler = () => {
   });
 };
 
+const openOrCloseMenuHandler = () => {
+  mobileMenuContent.classList.toggle("-right-64");
+  mobileMenuContent.classList.toggle("right-0");
+  overlay.classList.toggle("hidden");
+};
+
+const showSubMenu = () => {
+  subMenuElem.classList.toggle("max-h-0");
+  subMenuElem.classList.toggle("max-h-96");
+};
+
 toggleThemeBtn.addEventListener("click", themeHandler);
+mobileMenuBtn.addEventListener("click", openOrCloseMenuHandler);
+xMark.addEventListener("click", openOrCloseMenuHandler);
+storeElement.addEventListener("click", showSubMenu);

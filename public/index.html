@@ -488,12 +488,39 @@
     </header>
 
     <!-- Mobile Nav -->
-    <nav>
+    <nav class="md:hidden">
       <!-- Menu -->
-      <div></div>
+      <div
+        class="flex items-center justify-between pr-5 pl-4 bg-white h-16 dark:bg-zinc-700 sm:px-6"
+      >
+        <div
+          class="size-10 rounded-full bg-orange-300 flex items-center justify-center"
+        >
+          <div id="mobile-menu-toggle">
+            <svg class="size-6 text-zinc-700 dark:text-white cursor-pointer">
+              <use href="#bars-3"></use>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <svg class="w-25 h-10 text-orange-300">
+            <use href="#app-logo-type"></use>
+          </svg>
+        </div>
+        <div
+          class="size-10 rounded-full bg-orange-300 flex items-center justify-center"
+        >
+          <div>
+            <svg class="size-6 text-zinc-700 dark:text-white cursor-pointer">
+              <use href="#shopping-cart"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
       <!--  Menu Content -->
       <div
-        class="fixed top-0 right-0 bottom-0 w-64 px-4 bg-white dark:bg-zinc-700 z-20 divide-y divide-gray-100 dark:divide-white/10 overflow-y-auto"
+        class="fixed top-0 -right-64 bottom-0 w-64 px-4 bg-white dark:bg-zinc-700 z-20 divide-y transition-all divide-gray-100 dark:divide-white/10 overflow-y-auto pb-7.5"
+        id="mobile-menu-content"
       >
         <!-- Header -->
         <div class="flex items-center justify-between pt-3 pb-5">
@@ -505,7 +532,7 @@
               <use href="#app-logo-type"></use>
             </svg>
           </div>
-          <div>
+          <div class="x-mark">
             <svg class="size-5 cursor-pointer">
               <use href="#x-mark"></use>
             </svg>
@@ -526,8 +553,13 @@
           </a>
           <!-- Menu Items -->
           <div class="flex flex-col items-start gap-y-6 gap-x-2 pr-2.5">
+            <!-- Has Sub Menu -->
             <div>
-              <a href="#" class="flex items-center justify-between w-56">
+              <a
+                href="#"
+                id="store"
+                class="flex items-center justify-between w-56"
+              >
                 <span class="flex items-center gap-x-2">
                   <svg class="size-5">
                     <use href="#shopping-bag"></use>
@@ -539,7 +571,9 @@
                 </svg>
               </a>
               <!-- Sub Menu -->
-              <ul class="space-y-3 mt-3 text-sm pr-7">
+              <ul
+                class="sub-menu overflow-hidden max-h-0 transition-all duration-500 ease-in-out space-y-3 mt-3 text-sm pr-7"
+              >
                 <li>
                   <a href="#">قهوه ویژه</a>
                 </li>
