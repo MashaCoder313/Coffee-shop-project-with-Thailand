@@ -6,6 +6,7 @@
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="styles/output.css" />
     <link rel="icon" href="./images/fav-icon.png" />
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
     <script>
       // بررسی مقدار ذخیره‌شده در localStorage
       const theme = localStorage.getItem("theme");
@@ -22,7 +23,7 @@
   <body
     class="font-dana bg-gray-100 dark:bg-zinc-900 text-zinc-700 dark:text-white h-200"
   >
-    <!--? Pack Icon -->
+    <!--* Pack Icon -->
     <svg class="hidden">
       <symbol
         id="shopping-cart"
@@ -96,6 +97,18 @@
         <path
           fill-rule="evenodd"
           d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol
+        id="chevron-right"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8.22 4.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 1 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
           clip-rule="evenodd"
         />
       </symbol>
@@ -319,7 +332,6 @@
     </svg>
 
     <header>
-      <!--* Desktop Header *-->
       <section
         class="hidden fixed left-0 right-0 top-9 mx-auto bg-black/50 rounded-3xl py-5 px-5 lg:px-7.5 xl:px-10 backdrop-blur-[6px] md:block sm:w-[97%] lg:w-[95%] xl:w-[93%] 2xl:w-[90%] z-40"
       >
@@ -349,7 +361,7 @@
                 <a href="#">فروشگاه</a>
                 <!-- Sub Menu (Shop) -->
                 <ul
-                  class="absolute top-14 w-52 font-dana-medium text-base h-68 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-5 px-6 rounded-2xl leading-6 tracking-normal space-y-4 border-t-[3px] border-t-orange-200 shadow-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all delay-75 *:inline-block *:transition-colors *:hover:text-orange-300"
+                  class="absolute top-14 w-52 font-dana-medium text-base h-68 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-5 px-6 rounded-2xl leading-6 tracking-normal space-y-4 border-t-[3px] border-t-orange-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all delay-75 shadow-light *:inline-block *:transition-colors *:hover:text-orange-300"
                 >
                   <li>
                     <a href="#">قهوه ویژه</a>
@@ -523,7 +535,6 @@
           </div>
         </div>
       </section>
-      <!--* Mobile Header *-->
       <section class="md:hidden">
         <!-- Header Icons -->
         <div
@@ -774,7 +785,6 @@
     </header>
 
     <main>
-      <!--* Home *-->
       <section
         id="home"
         class="relative headerBgDesktop bg-no-repeat w-full bg-cover bg-position-[center_top] aspect-x2 headerBgMobile max-sm:h-50"
@@ -824,8 +834,6 @@
           </svg>
         </div>
       </section>
-
-      <!--* Products *-->
       <section class="Products container">
         <!--* Product Head *-->
         <div class="mt-8 md:pt-18 lg:pt-48 flex justify-between items-end">
@@ -1438,9 +1446,7 @@
           </div>
         </div>
       </section>
-
-      <!--!  Category Banner -->
-      <section class="my-8 md:my-20 pb-20">
+      <section class="my-8 md:my-20">
         <div class="container">
           <div
             class="flex items-center max-sm:flex-col gap-5 font-dana-medium text-white *:bg-blue-400 *:flex *:flex-col *:justify-center"
@@ -1552,10 +1558,61 @@
           </div>
         </div>
       </section>
+      <section class="pb-40">
+        <div class="container swiper">
+          <div class="flex justify-between items-end">
+            <div>
+              <h3 class="section-title">محصولات پر فروش</h3>
+              <span class="section-subtitle">پیشنهاد قهوه خور ها ...</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 md:gap-x-4.5 *:cursor-pointer"
+            >
+              <div
+                class="swiper-button-prev-custom flex items-center justify-center size-9 md:size-11 bg-white rounded-full"
+              >
+                <svg class="size-5 md:size-6.5">
+                  <use href="#chevron-right"></use>
+                </svg>
+              </div>
+              <div
+                class="swiper-button-next-custom flex items-center justify-center size-9 md:size-11 bg-white rounded-full"
+              >
+                <svg class="size-5 md:size-6.5">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!--* swiper-wrapper  -->
+          <div
+            class="swiper-wrapper mt-5 sm:mt-7 md:mt-10 lg:mt-12 *:pt-2 *:md:pt-3.5 lg:*:pt-5 *:pb-3.25 md:*:pb-5 lg:*:pb-7 *:px-2 md:*:px-4 lg:*:px-5 *:w-auto *:rounded-2xl *:bg-white *:dark:bg-zinc-700"
+          >
+            <!--! Data Loaded In Js  -->
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- OverLay -->
     <div class="overlay hidden fixed inset-0 bg-black/40 z-10"></div>
     <script src="./scripts/app.js"></script>
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const swiper = new Swiper(".swiper", {
+          direction: "horizontal", // اسلایدر افقی
+          loop: true, // چرخش بی‌نهایت
+          slidesPerView: 4, // چند آیتم در هر ردیف
+          spaceBetween: 60, // فاصله بین اسلایدها
+          navigation: {
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
+          },
+          watchOverflow: false, // ⛔ جلوگیری از افزودن swiper-button-lock
+        });
+      });
+    </script>
   </body>
 </html>

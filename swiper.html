@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>اسلایدر افقی</title>
+    <link rel="stylesheet" href="./public/styles/swiper-bundle.min.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+      }
+
+      .swiper-slide {
+        background: #eee;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">اسلاید ۱</div>
+        <div class="swiper-slide">اسلاید ۲</div>
+        <div class="swiper-slide">اسلاید ۳</div>
+        <div class="swiper-slide">اسلاید ۴</div>
+        <div class="swiper-slide">اسلاید ۵</div>
+      </div>
+
+      <!-- دکمه‌های کنترل -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="./public/scripts/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal", // حالت افقی
+        loop: true,
+        slidesPerView: 3, // چند آیتم هم‌زمان دیده شود
+        spaceBetween: 20, // فاصله بین آیتم‌ها
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        speed: 500, // سرعت حرکت
+        slidesPerGroup: 1, // با هر کلیک چندتا اسلاید عوض شود (1 یعنی فقط یکی)
+      });
+    </script>
+  </body>
+</html>
