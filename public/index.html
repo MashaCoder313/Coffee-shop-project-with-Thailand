@@ -827,12 +827,12 @@
         >
           <div class="w-50.25 md:w-75 lg:w-115.5">
             <h1
-              class="font-morabba-bold italic text-2xl md:text-4xl lg:text-6xl lg:leading-15 mb-0.5 lg:mb-2"
+              class="font-morabba-bold text-2xl md:text-4xl lg:text-6xl lg:leading-15 mb-0.5 lg:mb-2"
             >
               قهوه عربیکا تانزانیا
             </h1>
             <p
-              class="font-morabba-light italic text-xl md:text-4xl lg:text-5xl lg:leading-16"
+              class="font-morabba-light text-xl md:text-4xl lg:text-5xl lg:leading-16"
             >
               یک فنجان بالانس !
             </p>
@@ -1602,14 +1602,14 @@
               class="flex items-center gap-x-3 md:gap-x-4.5 *:cursor-pointer"
             >
               <div
-                class="swiper-button-prev-custom flex items-center justify-center size-9 md:size-11 bg-white rounded-full transition-all duration-35 active:scale-95"
+                class="swiper-button-prev-custom flex items-center justify-center size-9 md:size-11 bg-white text-zinc-700 rounded-full transition-all duration-35 active:scale-95"
               >
                 <svg class="size-5 md:size-6.5">
                   <use href="#chevron-right"></use>
                 </svg>
               </div>
               <div
-                class="swiper-button-next-custom flex items-center justify-center size-9 md:size-11 bg-white rounded-full transition-all duration-35 active:scale-95"
+                class="swiper-button-next-custom flex items-center justify-center size-9 md:size-11 bg-white text-zinc-700 rounded-full transition-all duration-35 active:scale-95"
               >
                 <svg class="size-5 md:size-6.5">
                   <use href="#chevron-left"></use>
@@ -1626,57 +1626,79 @@
           </div>
         </div>
       </section>
-      <section class="pb-8 sm:pb-10 md:pb-12 lg:pb-20 hidden">
+      <section class="pb-8 sm:pb-10 md:pb-12 lg:pb-20">
         <div
-          class="container h-36 bg-linear-to-r from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-between"
+          class="container md:h-36 bg-linear-to-r from-emerald-500 to-emerald-600 rounded-2xl flex max-md:flex-col max-md:gap-y-8.5 md:items-center md:justify-between xl:px-11 max-md:py-9 max-sm:px-3 max-md:px-7 md:gap-x-4"
         >
-          <div class="flex items-center">
-            <img class="" src="./images/club/diamond.png" alt="diamond" />
+          <div class="flex items-center gap-x-3 lg:gap-x-6">
+            <img
+              class="w-22 h-19.5 md:w-25 md:h-22.5 lg:size-auto"
+              src="./images/club/diamond.png"
+              alt="diamond"
+            />
             <div class="text-white">
-              <h4 class="font-morabba-bold text-5xl">کافی کلاب</h4>
-              <p class="font-morabba-light text-2xl">
+              <h4
+                class="font-morabba-bold text-2xl md:text-4xl lg:text-5xl max-md:mb-0.5"
+              >
+                کافی کلاب
+              </h4>
+              <p class="font-morabba-light text-lg md:text-xl lg:text-2xl">
                 میدونستی میتونی با امتیاز هات قهوه بگیری ؟
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-x-30">
-            <div class="flex items-center gap-x-5">
+          <div
+            class="flex items-end md:items-center max-md:justify-between md:gap-x-7 lg:gap-x-30"
+          >
+            <div class="flex items-center gap-x-2 sm:gap-x-5">
               <div
-                class="size-24.5 bg-white rounded-2xl flex flex-col items-center justify-end gap-y-1.5"
+                class="size-18 md:size-21 lg:size-24.5 bg-white rounded-2xl flex flex-col items-center justify-end gap-y-0.75 md:gap-y-1.5"
               >
-                <svg class="size-12">
+                <svg class="size-10 md:size-11 lg:size-12">
                   <use href="#discovery"></use>
                 </svg>
-                <span class="text-sm text-emerald-600">چرخ و بخت</span>
+                <span class="text-xs md:text-sm text-emerald-600"
+                  >چرخ و بخت</span
+                >
               </div>
               <div
-                class="size-24.5 bg-white rounded-2xl flex flex-col items-center justify-end gap-y-1.5"
+                class="size-18 md:size-21 lg:size-24.5 bg-white rounded-2xl flex flex-col items-center justify-end gap-y-0.75 md:gap-y-1.5"
               >
-                <svg class="size-12">
+                <svg class="size-10 md:size-11 lg:size-12">
                   <use href="#activity"></use>
                 </svg>
-                <span class="text-sm text-emerald-600"> ماموریت ها</span>
+                <span class="text-xs md:text-sm text-emerald-600">
+                  ماموریت ها</span
+                >
               </div>
               <div
-                class="size-24.5 bg-white rounded-2xl flex flex-col items-center justify-end gap-y-1.5"
+                class="size-18 md:size-21 lg:size-24.5 bg-white rounded-2xl flex flex-col items-center justify-end gap-y-0.75 md:gap-y-1.5"
               >
-                <svg class="size-12">
+                <svg class="size-10 md:size-11 lg:size-12">
                   <use href="#ticket-star"></use>
                 </svg>
-                <spa class="text-sm text-emerald-600" n>جایزه ها</spa>
+                <spa class="text-xs md:text-sm text-emerald-600" n
+                  >جایزه ها</spa
+                >
               </div>
             </div>
-            <div class="flex flex-col text-white">
-              <div class="flex flex-col gap-y-2">
-                <span class="font-dana-demibold text-3xl">542</span>
-                <span class="font-dana-medium text-sm">امتیـــــــاز شما</span>
+            <div
+              class="flex flex-col items-center gap-y-1 md:gap-y-2 text-white"
+            >
+              <div class="flex flex-col">
+                <span class="font-dana-demibold text-2xl lg:text-3xl">542</span>
+                <span class="font-dana-medium text-xs md:text-sm line-clamp-1"
+                  >امتیـــــــاز شما</span
+                >
               </div>
               <button
-                class="flex items-center text-white bg-linear-to-r from-orange-200 to-orange-300 rounded-[100px] py-1.5 pr-2.5 pl-0.5"
+                class="flex items-center text-white bg-linear-to-r from-orange-200 to-orange-300 rounded-[100px] py-1.5 pr-2.5 pl-0.5 cursor-pointer"
                 type="button"
               >
-                <span class="font-dana-medium text-sm">دریافت جایزه</span>
-                <svg class="size-6">
+                <span class="font-dana-medium text-xs md:text-sm line-clamp-1"
+                  >دریافت جایزه</span
+                >
+                <svg class="size-5 md:size-6">
                   <use href="#chevron-left"></use>
                 </svg>
               </button>

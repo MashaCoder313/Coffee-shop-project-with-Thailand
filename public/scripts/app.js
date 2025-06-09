@@ -53,14 +53,6 @@ const overlayHandler = () => {
   overlayElem.classList.toggle("hidden");
 };
 
-toggleThemeBtn.addEventListener("click", themeHandler);
-mobileMenuBtn.addEventListener("click", openOrCloseMenuHandler);
-closeMenuIcon.addEventListener("click", openOrCloseMenuHandler);
-storeElement.addEventListener("click", showSubMenu);
-mobileThemeBtn.addEventListener("click", themeHandler);
-mobileCartIcon.addEventListener("click", shoppingCartHandler);
-closeCartIcon.addEventListener("click", shoppingCartHandler);
-
 //* BestSellingProducts
 
 const bestSellingProducts = [
@@ -187,5 +179,11 @@ const renderBestSellers = () => {
   });
 };
 
-// حتما بعد از لود صفحه اجرا شود
+toggleThemeBtn.addEventListener("click", themeHandler);
+mobileMenuBtn.addEventListener("click", openOrCloseMenuHandler);
+closeMenuIcon.addEventListener("click", openOrCloseMenuHandler);
+storeElement.addEventListener("click", showSubMenu);
+mobileThemeBtn.addEventListener("click", themeHandler);
+mobileCartIcon.addEventListener("click", shoppingCartHandler);
+closeCartIcon.addEventListener("click", shoppingCartHandler);
 document.addEventListener("DOMContentLoaded", renderBestSellers);
