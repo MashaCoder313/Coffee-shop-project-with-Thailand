@@ -221,7 +221,7 @@ const blogItemsHandler = () => {
 
   blogItems.forEach((blogItem) => {
     const template = `<div class="flex sm:flex-col gap-x-2.5">
-              <a
+              <a href="#"
                 class="group relative size-32.5 sm:w-full shrink-0 md:h-46.5 rounded-2xl rounded-bl-4xl overflow-hidden"
               >
                 <!-- لایه پس‌زمینه -->
