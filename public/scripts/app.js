@@ -179,6 +179,101 @@ const renderBestSellers = () => {
   });
 };
 
+//* Blog Items
+
+const blogItems = [
+  {
+    id: 1,
+    title: "طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی",
+    image: "./images/blogs/blog-1.png",
+    day: "21",
+    month: "خرداد",
+    year: "1404",
+  },
+  {
+    id: 2,
+    title: "طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی",
+    image: "./images/blogs/blog-2.png",
+    day: "21",
+    month: "خرداد",
+    year: "1404",
+  },
+  {
+    id: 3,
+    title: "طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی",
+    image: "./images/blogs/blog-3.png",
+    day: "21",
+    month: "خرداد",
+    year: "1404",
+  },
+  {
+    id: 4,
+    title: "طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی",
+    image: "./images/blogs/blog-4.png",
+    day: "21",
+    month: "خرداد",
+    year: "1404",
+  },
+];
+
+const blogItemsHandler = () => {
+  const wrapper = document.querySelector(".blog-body");
+
+  blogItems.forEach((blogItem) => {
+    const template = `<div class="flex sm:flex-col gap-x-2.5">
+              <a
+                class="group relative size-32.5 sm:w-full shrink-0 md:h-46.5 rounded-2xl rounded-bl-4xl overflow-hidden"
+              >
+                <!-- لایه پس‌زمینه -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-orange-200 to-orange-300 z-0 transition-all opacity-0 md:group-hover:opacity-80"
+                ></div>
+
+                <!-- تصویر -->
+                <img
+                  class="size-full object-cover z-10"
+                  src="${blogItem.image}"
+                  alt="blogs-img"
+                />
+
+                <!-- آیکون -->
+                <svg
+                  class="absolute inset-0 m-auto w-21 h-8.5 text-amber-900 z-20 transition-all opacity-0 md:group-hover:opacity-80"
+                >
+                  <use href="#app-logo-type"></use>
+                </svg>
+              </a>
+
+              <div
+                class="flex max-sm:flex-col justify-between sm:items-center w-full max-sm:pb-1.5 sm:mt-2.75"
+              >
+                <h4 class="font-dana-medium text-sm sm:text-base md:text-lg line-clamp-2 h-14 dark:text-white">${blogItem.title}</h4>
+                <div
+                  class="flex items-end sm:items-center justify-between font-dana-medium max-sm:text-xs"
+                >
+                  <div
+                    class="text-teal-600 h-17.25 flex sm:flex-col items-end pl-4.5">
+                    <span class="sm:text-2xl">${blogItem.day}</span>
+                    <span class="sm:text-sm">${blogItem.month}</span>
+                    <span class="sm:text-sm">${blogItem.year}</span>
+                  </div>
+                  <a
+                    class="flex sm:hidden items-center justify-center gap-x-1 w-17.25 h-5 text-orange-300 bg-orange-300/20 rounded-md"
+                    href="#"
+                  >
+                    <span>مطالعه</span>
+                    <svg class="size-3.5">
+                      <use href="#arrow-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>`;
+
+    wrapper.insertAdjacentHTML("beforeend", template);
+  });
+};
+
 toggleThemeBtn.addEventListener("click", themeHandler);
 mobileMenuBtn.addEventListener("click", openOrCloseMenuHandler);
 closeMenuIcon.addEventListener("click", openOrCloseMenuHandler);
@@ -186,4 +281,7 @@ storeElement.addEventListener("click", showSubMenu);
 mobileThemeBtn.addEventListener("click", themeHandler);
 mobileCartIcon.addEventListener("click", shoppingCartHandler);
 closeCartIcon.addEventListener("click", shoppingCartHandler);
-document.addEventListener("DOMContentLoaded", renderBestSellers);
+document.addEventListener("DOMContentLoaded", () => {
+  renderBestSellers();
+  blogItemsHandler();
+});

@@ -8,7 +8,6 @@
     <link rel="icon" href="./images/fav-icon.png" />
     <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
     <script>
-      // بررسی مقدار ذخیره‌شده در localStorage
       const theme = localStorage.getItem("theme");
       if (
         theme === "dark" ||
@@ -360,6 +359,18 @@
         <path
           d="M31.712 0C36.28 0 39.998 3.68403 39.998 8.21028L40 13.5649C40 13.9573 39.842 14.3378 39.562 14.6152C39.28 14.8946 38.9 15.0512 38.5 15.0512C36.858 15.0512 35.522 16.375 35.522 18.002C35.522 19.629 36.858 20.9528 38.5 20.9528C39.328 20.9528 40 21.6186 40 22.4391V27.7917C40 32.318 36.284 36 31.716 36H8.286C3.718 36 0 32.318 0 27.7917V22.4391C0 21.6186 0.672 20.9528 1.5 20.9528C3.144 20.9528 4.48 19.629 4.48 18.002C4.48 16.4166 3.198 15.2236 1.5 15.2236C1.102 15.2236 0.722 15.067 0.44 14.7876C0.158 14.5082 0 14.1297 0 13.7373L0.004 8.21028C0.004 3.68403 3.72 0 8.288 0H31.712ZM20.004 10.3069C19.436 10.3069 18.928 10.6201 18.674 11.1234L17.216 14.0504L13.964 14.5201C13.402 14.5994 12.942 14.9799 12.764 15.5149C12.588 16.05 12.73 16.6286 13.138 17.021L15.496 19.296L14.94 22.5124C14.844 23.0673 15.07 23.6182 15.53 23.9491C15.79 24.1334 16.092 24.2286 16.398 24.2286C16.632 24.2286 16.868 24.1711 17.084 24.0581L20 22.5401L22.91 24.0542C23.414 24.3217 24.012 24.2801 24.47 23.9472C24.932 23.6182 25.158 23.0673 25.062 22.5124L24.504 19.296L26.862 17.021C27.272 16.6286 27.414 16.05 27.236 15.5149C27.06 14.9799 26.6 14.5994 26.044 14.5221L22.786 14.0504L21.328 11.1254C21.078 10.622 20.57 10.3089 20.004 10.3069Z"
           fill="#059669"
+        />
+      </symbol>
+      <symbol
+        id="arrow-left"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.28 4.22a.75.75 0 0 1 0 1.06L4.56 8H16a.75.75 0 0 1 0 1.5H4.56l2.72 2.72a.75.75 0 0 1-1.06 1.06l-4-4a.75.75 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 0Z"
+          clip-rule="evenodd"
         />
       </symbol>
     </svg>
@@ -1602,14 +1613,14 @@
               class="flex items-center gap-x-3 md:gap-x-4.5 *:cursor-pointer"
             >
               <div
-                class="swiper-button-prev-custom flex items-center justify-center size-9 md:size-11 bg-white text-zinc-700 rounded-full transition-all duration-35 active:scale-95"
+                class="swiper-button-prev-custom flex items-center justify-center size-9 md:size-11 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white rounded-full transition-all duration-35 active:scale-95"
               >
                 <svg class="size-5 md:size-6.5">
                   <use href="#chevron-right"></use>
                 </svg>
               </div>
               <div
-                class="swiper-button-next-custom flex items-center justify-center size-9 md:size-11 bg-white text-zinc-700 rounded-full transition-all duration-35 active:scale-95"
+                class="swiper-button-next-custom flex items-center justify-center size-9 md:size-11 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white rounded-full transition-all duration-35 active:scale-95"
               >
                 <svg class="size-5 md:size-6.5">
                   <use href="#chevron-left"></use>
@@ -1703,6 +1714,87 @@
                 </svg>
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="pb-8 sm:pb-10 md:pb-12 lg:pb-20">
+        <div class="container">
+          <!--* Product Head *-->
+          <div class="flex justify-between items-end">
+            <div>
+              <h3 class="section-title">مطالب خواندنی</h3>
+            </div>
+            <div class="section-link">
+              <div>
+                <a href="#" class="section-link--text max-md:hidden"
+                  >مشاهده همه محصولات</a
+                >
+                <a href="#" class="section-link--text md:hidden">مشاهده همه</a>
+              </div>
+              <svg class="section-link--icon">
+                <use href="#chevron-left"></use>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="blog-body grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 mt-5 sm:mt-7 md:mt-10 lg:mt-12 gap-5 *:p-2.5 *:rounded-2xl *:bg-white *:dark:bg-zinc-700"
+          >
+            <!--!flex -->
+            <div class="hidden sm:flex-col gap-x-2.5">
+              <a
+                class="group relative size-32.5 sm:w-full shrink-0 md:h-46.5 rounded-2xl rounded-bl-4xl overflow-hidden"
+              >
+                <!-- لایه پس‌زمینه -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-orange-200 to-orange-300 z-0 transition-all opacity-0 md:group-hover:opacity-80"
+                ></div>
+
+                <!-- تصویر -->
+                <img
+                  class="size-full object-cover z-10"
+                  src="${blogItem.image}"
+                  alt="blogs-img"
+                />
+
+                <!-- آیکون -->
+                <svg
+                  class="absolute inset-0 m-auto w-21 h-8.5 text-amber-900 z-20 transition-all opacity-0 md:group-hover:opacity-80"
+                >
+                  <use href="#app-logo-type"></use>
+                </svg>
+              </a>
+
+              <div
+                class="flex max-sm:flex-col justify-between sm:items-center w-full max-sm:pb-1.5 sm:mt-2.75"
+              >
+                <h4
+                  class="font-dana-medium text-sm sm:text-base md:text-lg line-clamp-2 h-14 dark:text-white"
+                >
+                  ${blogItem.title}
+                </h4>
+                <div
+                  class="flex items-end sm:items-center justify-between font-dana-medium max-sm:text-xs"
+                >
+                  <div
+                    class="text-teal-600 h-17.25 flex sm:flex-col items-end pl-4.5"
+                  >
+                    <span class="sm:text-2xl">${blogItem.day}</span>
+                    <span class="sm:text-sm">${blogItem.month}</span>
+                    <span class="sm:text-sm">${blogItem.year}</span>
+                  </div>
+                  <a
+                    class="flex sm:hidden items-center justify-center gap-x-1 w-17.25 h-5 text-orange-300 bg-orange-300/20 rounded-md"
+                    href="#"
+                  >
+                    <span>مطالعه</span>
+                    <svg class="size-3.5">
+                      <use href="#arrow-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Data Loaded Form Js -->
           </div>
         </div>
       </section>
