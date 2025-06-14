@@ -917,10 +917,10 @@
         </div>
         <!--? شبکه‌ی محصولات (۴ ستون در دسکتاپ) -->
         <div
-          class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 mt-5 sm:mt-7 md:mt-10 lg:mt-12 gap-5 *:pt-2 *:md:pt-3.5 lg:*:pt-5 *:pb-3.25 md:*:pb-5 lg:*:pb-7 *:px-2 md:*:px-4 lg:*:px-5 *:w-auto *:rounded-2xl *:bg-white *:dark:bg-zinc-700"
+          class="products-body grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 mt-5 sm:mt-7 md:mt-10 lg:mt-12 gap-5 *:pt-2 *:md:pt-3.5 lg:*:pt-5 *:pb-3.25 md:*:pb-5 lg:*:pb-7 *:px-2 md:*:px-4 lg:*:px-5 *:w-auto *:rounded-2xl *:bg-white *:dark:bg-zinc-700"
         >
-          <!-- کارت محصول تکی -->
-          <div class="relative">
+          <!-- Data Loaded In J -->
+          <div class="relative hidden">
             <!-- نشان تخفیف (درصد تخفیف) -->
             <span
               class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
@@ -930,519 +930,6 @@
             <!-- تصویر محصول -->
             <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
               <img src="./images/products/p1.png" alt="product-1" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- جایگاه خالی برای کارت‌های دیگر (۷ عدد) -->
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p2.png" alt="product-1" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p3.png" alt="product-" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p4.png" alt="product-1" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p5.png" alt="product-1" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p6.png" alt="product-1" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p7.png" alt="product-1" />
-            </div>
-
-            <!-- عنوان محصول (با محدودیت ۲ خط) -->
-            <h4
-              class="text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2 h-14 mb-2.5 leading-7 dark:text-white"
-            >
-              قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-            </h4>
-
-            <!-- قیمت فعلی و قیمت قبل از تخفیف -->
-            <div class="flex items-center gap-2.5">
-              <!-- قیمت فعلی -->
-              <div
-                class="flex items-center text-teal-600 dark:text-emerald-500"
-              >
-                <span class="text-base md:text-lg lg:text-xl">154,000</span>
-                <span class="text-xs tracking-tighter">تومان</span>
-              </div>
-
-              <!-- قیمت قبلی (خط خورده با after) -->
-              <div
-                class="flex items-center text-gray-400 relative after:absolute after:content-[''] after:inset-0 after:w-full after:h-px after:bg-red-500 after:rounded-2xl after:my-auto"
-              >
-                <span class="text-xl">175,000</span>
-                <span class="max-md:hidden text-sm tracking-tighter"
-                  >تومان</span
-                >
-              </div>
-            </div>
-
-            <!-- آیکن‌های زیر قیمت -->
-            <div class="flex items-center justify-between mt-5.5">
-              <!-- آیکن‌های عملکردی (سبد خرید و مقایسه) -->
-              <div class="flex items-center gap-x-2.5 md:gap-x-3">
-                <!-- آیکن سبد خرید -->
-                <div
-                  class="flex items-center justify-center size-9 text-gray-400 lg:hover:text-white transition-all bg-gray-100 lg:hover:bg-teal-600 dark:bg-zinc-800 lg:dark:hover:bg-emerald-500 rounded-full md:cursor-pointer"
-                >
-                  <svg class="size-4 md:size-4.75 lg:size-5.5">
-                    <use href="#shopping-cart"></use>
-                  </svg>
-                </div>
-
-                <!-- آیکن مقایسه -->
-                <svg
-                  class="size-4 md:size-4.75 lg:size-6 text-gray-400 lg:hover:text-teal-600 lg:dark:hover:text-emerald-500 transition-colors md:cursor-pointer"
-                >
-                  <use href="#arrows-right-left"></use>
-                </svg>
-              </div>
-
-              <!-- امتیاز (۵ ستاره زرد) -->
-              <div
-                class="flex *:size-4 md:*:size-5 lg:*:size-6 *:text-yellow-400"
-              >
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-                <svg><use href="#star"></use></svg>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <!-- نشان تخفیف (درصد تخفیف) -->
-            <span
-              class="flex-center font-dana-medium text-xs md:text-sm lg:text-base absolute right-2 md:right-4 lg:right-6 w-10 h-5 lg:w-13.5 lg:h-7.5 bg-orange-300 text-white dark:text-zinc-700 rounded-[100px] pt-1"
-              >12%</span
-            >
-
-            <!-- تصویر محصول -->
-            <div class="size-32 sm:size-40 md:size-52 lg:size-65 mx-auto">
-              <img src="./images/products/p8.png" alt="product-1" />
             </div>
 
             <!-- عنوان محصول (با محدودیت ۲ خط) -->
@@ -1816,7 +1303,7 @@
           </div>
         </div>
       </section>
-      <section class="pb-8 sm:pb-10 md:pb-12 lg:pb-20">
+      <section class="pb-16 md:pb-20 lg:pb-28">
         <div class="container sm:flex gap-x-4">
           <img
             class="w-74 h-76.25 mx-auto pb-6"
@@ -1852,6 +1339,70 @@
                 >ثبت سفارش تلفنی</span
               >
             </button>
+          </div>
+        </div>
+      </section>
+      <section class="pb-36">
+        <div
+          class="container relative flex items-center justify-between *:shrink-0 max-md:*:w-1/2 max-md:text-center flex-wrap gap-y-11 py-2.5 after:content-normal md:after:content-none after:w-px after:h-[100%] after:bg-gray-300 after:absolute after:inset-0 after:mx-auto dark:after:bg-white/10 before:content-normal md:before:content-none before:w-[90%] before:h-px before:bg-gray-300 before:absolute before:inset-0 before:m-auto dark:before:bg-white/10"
+        >
+          <div class="flex items-center gap-4 max-md:flex-col">
+            <div class="w-16.5 h-18.25 *:size-full">
+              <svg class="dark:hidden">
+                <use href="./images/svgs/services/support.svg"></use>
+              </svg>
+              <svg class="hidden dark:inline-block">
+                <use href="./images/svgs/services/support-dark.svg"></use>
+              </svg>
+            </div>
+            <div class="font-dana-medium">
+              <h5 class="text-sm md:text-lg mb-3.5">پشتیبانی شبانه روزی</h5>
+              <span class="text-xs md:text-sm">7 روز هفته ، 24 ساعته</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 max-md:flex-col">
+            <div class="w-16.5 h-18.25 *:size-full">
+              <svg class="dark:hidden">
+                <use href="./images/svgs/services/express-delivery.svg"></use>
+              </svg>
+              <svg class="hidden dark:inline-block">
+                <use
+                  href="./images/svgs/services/express-delivery-dark.svg"
+                ></use>
+              </svg>
+            </div>
+            <div class="font-dana-medium">
+              <h5 class="text-sm md:text-lg mb-3.5">امکان تحویل اکسپرس</h5>
+              <span class="text-xs md:text-sm">ارسال بسته با سرعت باد</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 max-md:flex-col">
+            <div class="w-16.5 h-18.25 *:size-full">
+              <svg class="dark:hidden">
+                <use href="./images/svgs/services/coffee.svg"></use>
+              </svg>
+              <svg class="hidden dark:inline-block">
+                <use href="./images/svgs/services/coffee-dark.svg"></use>
+              </svg>
+            </div>
+            <div class="font-dana-medium">
+              <h5 class="text-sm md:text-lg mb-3.5">رست تخصصی</h5>
+              <span class="text-xs md:text-sm">تازه برشته شده و با کیفیت</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 max-md:flex-col">
+            <div class="w-16.5 h-18.25 *:size-full">
+              <svg class="dark:hidden">
+                <use href="./images/svgs/services/pitcher.svg"></use>
+              </svg>
+              <svg class="hidden dark:inline-block">
+                <use href="./images/svgs/services/pitcher-dark.svg"></use>
+              </svg>
+            </div>
+            <div class="font-dana-medium">
+              <h5 class="text-sm md:text-lg mb-3.5">اکسسوری قهوه</h5>
+              <span class="text-xs md:text-sm">وسایل و ادوات دم آوری</span>
+            </div>
           </div>
         </div>
       </section>
